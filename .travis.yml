@@ -1,0 +1,11 @@
+language: objective-c
+before_script:
+  # set the JAVA_HOME which is not set by default for OSX Travis-CI workers
+  - export "JAVA_HOME=`/usr/libexec/java_home`"
+  # Download and install a specific Flash Player from the Adobe Archives:
+  # http://helpx.adobe.com/flash-player/kb/archived-flash-player-versions.html
+  - sh getflashplayer.sh 'http://download.macromedia.com/pub/flashplayer/installers/archive/fp_11.7.700.225_archive.zip'
+  # download as3-crypto library
+  # add as3-crypto library to local maven repository
+  - mvn install:install-file -DgroupId=com.hurlant -DartifactId=as3-crypto -Dversion=1.0 -Dpackaging=swc -Dfile=libs/as3crypto.swc
+script: mvn test -Dflex.flashPlayer.command=Flash\ Player\ Debugger.app/Contents/MacOS/Flash\ Player\ Debugger

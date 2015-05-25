@@ -3,9 +3,9 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.janschaedlich</groupId>
-	<version>1.0.0-rc-1</version>
-	<artifactId>oauth</artifactId>
+	<groupId>org.janschaedlich.oauth</groupId>
+	<version>1.0</version>
+	<artifactId>as3-oauth</artifactId>
 	<packaging>swc</packaging>
 	<name>as3-oauth</name>
 
@@ -16,7 +16,7 @@
 		<flexmojos.version>4.2-beta</flexmojos.version>
 	</properties>
 
-	<description>An actionscript implementation of The OAuth 1.0 Protocol. See https://tools.ietf.org/html/rfc5849 for more information.</description>
+	<description>An ActionScript Library implementing the OAuth 1.0 Protocol.</description>
 	<url>https://github.com/jschaedl/as3-oauth</url>
 
 	<build>

@@ -8,7 +8,7 @@ package org.janschaedlich.oauth.request
 	import org.janschaedlich.oauth.OAuthConsumer;
 	import org.janschaedlich.oauth.OAuthToken;
 	import org.janschaedlich.oauth.signature.ISignatureMethod;
-	import org.janschaedlich.oauth.util.URLEncoding;
+	import org.janschaedlich.oauth.util.URLEncoder;
 
 	public class OAuthRequest
 	{
@@ -151,7 +151,7 @@ package org.janschaedlich.oauth.request
 				{
 					// Todo add comma after param and 
 					authorizationHeaderData += ',' 
-						+ requestParam + '="' + URLEncoding.encode(requestParams[requestParam]) + '"';
+						+ requestParam + '="' + URLEncoder.encode(requestParams[requestParam]) + '"';
 				}
 			}
 			

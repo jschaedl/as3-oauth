@@ -8,7 +8,7 @@ package org.janschaedlich.oauth.signature
 	import flash.utils.ByteArray;
 	
 	import org.janschaedlich.oauth.request.OAuthRequest;
-	import org.janschaedlich.oauth.util.URLEncoding;
+	import org.janschaedlich.oauth.util.URLEncoder;
 
 	public class SignatureMethodHMACSHA1 implements ISignatureMethod
 	{		
@@ -37,9 +37,9 @@ package org.janschaedlich.oauth.signature
 		private function createSignatureBaseString(httpMethod:String, 
 			requestUrl:String, requestParameter:Object):String
 		{
-			return URLEncoding.encode(httpMethod.toUpperCase())+ "&";
-			+ URLEncoding.encode(requestUrl) + "&";
-			+ URLEncoding.encode(
+			return URLEncoder.encode(httpMethod.toUpperCase())+ "&";
+			+ URLEncoder.encode(requestUrl) + "&";
+			+ URLEncoder.encode(
 				filterSignatureBaseStringParams(requestParameter));
 			
 		}
@@ -47,9 +47,9 @@ package org.janschaedlich.oauth.signature
 		private function encodeAndConcatSecrets(consumerSecret:String, 
 			tokenSecret:String, isTokenEmpty:Boolean):String
 		{			
-			var concatenatedSecrets:String = URLEncoding.encode(consumerSecret);
+			var concatenatedSecrets:String = URLEncoder.encode(consumerSecret);
 			if (!isTokenEmpty)
-				concatenatedSecrets +=  "&" + URLEncoding.encode(tokenSecret);
+				concatenatedSecrets +=  "&" + URLEncoder.encode(tokenSecret);
 			
 			return concatenatedSecrets;
 		}
@@ -72,7 +72,7 @@ package org.janschaedlich.oauth.signature
 			for (var requestParam:String in requestParams) 
 			{
 				if (isOAuthSignatureParam(requestParam))
-					params.push(requestParam + "=" + URLEncoding.encode(requestParams[requestParam].toString()));
+					params.push(requestParam + "=" + URLEncoder.encode(requestParams[requestParam].toString()));
 			}
 			
 			params.sort();

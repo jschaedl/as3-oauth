@@ -1,6 +1,4 @@
-# An ActionScript Library implementing the OAuth 1.0 Protocol 
-
-[![Build Status](https://travis-ci.org/jschaedl/as3-oauth.svg)](https://travis-ci.org/jschaedl/as3-oauth)
+# An ActionScript Library implementing the OAuth 1.0 Protocol [![Build Status](https://travis-ci.org/jschaedl/as3-oauth.svg)](https://travis-ci.org/jschaedl/as3-oauth)
 
 An ActionScript 3 library for making authenticated web service request based on the OAuth 1.0 protocol. This library is implemented according to the [OAuth 1.0 Sspecification](https://tools.ietf.org/html/rfc5849).
 

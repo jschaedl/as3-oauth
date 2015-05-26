@@ -14,8 +14,9 @@ The ActionScript OAuth 1.0 Library supports the following features...
 * [x] ability to [authorize a resource owner](https://tools.ietf.org/html/rfc5849#section-2.2) 
 * [x] ability to [fetch token credentials](https://tools.ietf.org/html/rfc5849#section-2.3) 
 * [x] ability to [make authenticated requests](https://tools.ietf.org/html/rfc5849#section-3) 
-* [ ] provide a event based request and response mechanism
-* [ ] parse a oauth response into a fully typed object (to be done)
+* [ ] provide an OAuthRequestHelper implementing an event based request and response mechanism (to be done)
+* [ ] provide an OAuthHTTPService for using it in a mxml file (to be done)
+* [ ] parse an oauth response into a fully typed object (to be done)
 
 ### Dependencies
 

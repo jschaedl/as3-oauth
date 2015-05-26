@@ -89,7 +89,7 @@ mvn clean test -Dflex.flashPlayer.command=Flash\ Player\ Debugger.app/Contents/M
 
 ## Author
 
-* Created by Jan Schädlich
+[Jan Schädlich](https://github.com/jschaedl)
 
 <!---
 ## Acknowledgments

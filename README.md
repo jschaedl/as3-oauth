@@ -59,7 +59,7 @@ you can use this library in your project like the following paragraph demonstrat
 
 ### Demo
 
-For a demo project using this library and an example maven configuration have a look [here]().
+For a demo project using this library and an example Maven configuration have a look [here]().
 
 ### Documentation
 
@@ -69,12 +69,12 @@ You can find the full ASDocs for the project [here]().
 ### Further Development
 
 #### How to contribute
-If you find bugs or want to enhance some functionality, please fork the master branch, fix the bug you found or add your enhancements and make a pull request. Please commit your changes in tiny steps and add a detailed description on every commit. 
+If you find bugs or want to enhance some functionality, please fork the master branch, fix the bug you found or add your enhancements and make a pull request. Please commit your changes in tiny steps and add a detailed description for every commit. 
 
 <!---Please make sure that all changes be accompanied by passing unit tests.--->
 
 #### Unit Tests
-This library was built in a testdriven development approach and is there for test covered. To run the units tests under folder ```src/test``` it is necessary that you have a FlashPlayer executable in your ```PATH```. 
+This library was built using a testdriven development approach and is therefore test covered. To run the units tests under folder ```src/test``` it is necessary that you have a FlashPlayer executable in your ```PATH```. 
 
 You can use the ```getflashplayer.sh``` ShellScript to download and place a current FlashPlayer executable in your projects directory.
 

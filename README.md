@@ -69,7 +69,7 @@ You can find the full ASDocs for the project [here]().
 ### Further Development
 
 #### How to contribute
-If you found bugs or want to enhance some functionality, please fork the master branch, fix the bug you found or add your enhancements and make a pull request. Please commit your changes in tiny steps and add a detailed description on every commit. 
+If you find bugs or want to enhance some functionality, please fork the master branch, fix the bug you found or add your enhancements and make a pull request. Please commit your changes in tiny steps and add a detailed description on every commit. 
 
 <!---Please make sure that all changes be accompanied by passing unit tests.--->
 

@@ -1,6 +1,8 @@
-# An ActionScript Library implementing the OAuth 1.0 Protocol [![Build Status](https://travis-ci.org/jschaedl/as3-oauth.svg)](https://travis-ci.org/jschaedl/as3-oauth)
+# An ActionScript Library implementing the OAuth 1.0 Protocol
 
-An ActionScript 3 library for making authenticated web service request based on the OAuth 1.0 protocol. This library is implemented according to the [OAuth 1.0 Sspecification](https://tools.ietf.org/html/rfc5849).
+> **A note at the beginning:** This implementation is only a project to get a deeper understanding of how OAuth 1.0 actually works. It is not a production ready implementation. So use it at your own risk, but please keep in mind that you should by no means use the OAuth Authorization Process implemented in this library for real world application, since therefore you have to store your ```consumer key``` and ```consumer secret``` within your application and it could be reverse engineered and so abused. So it's better to outsource this process on the server to keep your ```comsumer key``` and ```consumer secret``` actually secret. 
+
+An ActionScript 3 library for making authenticated web service request based on the OAuth 1.0 protocol. This library is implemented according to the [OAuth 1.0 Specification](https://tools.ietf.org/html/rfc5849).
 
 ## Overview
 
@@ -14,9 +16,9 @@ The ActionScript OAuth 1.0 Library supports the following features...
 * [x] ability to [authorize a resource owner](https://tools.ietf.org/html/rfc5849#section-2.2) 
 * [x] ability to [fetch token credentials](https://tools.ietf.org/html/rfc5849#section-2.3) 
 * [x] ability to [make authenticated requests](https://tools.ietf.org/html/rfc5849#section-3) 
-* [ ] provide an OAuthRequestHelper implementing an event based request and response mechanism (to be done)
-* [ ] provide an OAuthHTTPService for using it in a mxml file (to be done)
-* [ ] parse an oauth response into a fully typed object (to be done)
+* [ ] provide an OAuthRequestHelper implementing an event based request and response mechanism
+* [ ] provide an OAuthHTTPService for using it in a mxml file
+* [ ] parse an oauth response into a fully typed object
 
 ### Dependencies
 

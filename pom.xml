@@ -1,34 +1,30 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-
 	<modelVersion>4.0.0</modelVersion>
-
 	<groupId>org.janschaedlich.oauth</groupId>
 	<version>1.0</version>
 	<artifactId>as3-oauth</artifactId>
 	<packaging>swc</packaging>
 	<name>as3-oauth</name>
-
 	<properties>
-		<flex.compiler.version>4.6.b.23201</flex.compiler.version>
-		<flex.sdk.version>4.6.b.23201</flex.sdk.version>
-		<flexunit.version>4.2-beta</flexunit.version>
-		<flexmojos.version>4.2-beta</flexmojos.version>
+		<flex.compiler.version>4.14.1.20150325</flex.compiler.version>
+		<flex.sdk.version>4.14.1.20150325</flex.sdk.version>
+		<flexunit.version>4.1.0</flexunit.version>
+		<flexmojos.version>7.1.0-SNAPSHOT</flexmojos.version>
 	</properties>
-
 	<description>An ActionScript Library implementing the OAuth 1.0 Protocol.</description>
 	<url>https://github.com/jschaedl/as3-oauth</url>
-
 	<build>
 		<sourceDirectory>src/main/actionscript</sourceDirectory>
 		<testSourceDirectory>src/test/actionscript</testSourceDirectory>
 		<plugins>
 			<plugin>
-				<groupId>org.sonatype.flexmojos</groupId>
+				<groupId>net.flexmojos.oss</groupId>
 				<artifactId>flexmojos-maven-plugin</artifactId>
 				<version>${flexmojos.version}</version>
 				<extensions>true</extensions>
 				<configuration>
+					<debug>true</debug>
 					<testRunner>
 						<launcher>
 							<flashplayerCommand>${flex.flashPlayer.command}</flashplayerCommand>
@@ -38,55 +34,42 @@
 					<headlessServer>true</headlessServer>
 					<verboseStacktraces>true</verboseStacktraces>
 					<includeTestFiles>
-						<includeTestFile>*Test.as</includeTestFile>
+						<includeTestFile>*Test*.as</includeTestFile>
 					</includeTestFiles>
 				</configuration>
 				<dependencies>
-					<!-- Nice POM bundle available per SDK on Sonatype thanks to Flex-Mojos -->
 					<dependency>
-						<groupId>com.adobe.flex</groupId>
+						<groupId>org.apache.flex</groupId>
 						<artifactId>compiler</artifactId>
-						<version>${flex.sdk.version}</version>
+						<version>${flex.compiler.version}</version>
 						<type>pom</type>
 					</dependency>
 				</dependencies>
 			</plugin>
-			<!--<plugin>
-				<groupId>com.adobe.ac</groupId>
-				<artifactId>flex-pmd-cpd-maven-plugin</artifactId>
-				<version>1.0.RC5</version>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>check</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<minimumTokenCount>50</minimumTokenCount>
-				</configuration>
-			</plugin>-->
 		</plugins>
 	</build>
-
 	<dependencies>
-		<!-- Nice POM bundle available per SDK on Sonatype thanks to Flex-Mojos -->
 		<dependency>
-			<groupId>com.adobe.flex.framework</groupId>
-			<artifactId>flex-framework</artifactId>
-			<version>${flex.sdk.version}</version>
+			<groupId>org.apache.flex</groupId>
+			<artifactId>framework</artifactId>
+			<version>4.14.1.20150325</version>
 			<type>pom</type>
 		</dependency>
-		<!-- Based on testing library dependency specified, FlexMojos will know 
-			how to test your application -->
 		<dependency>
-			<groupId>com.adobe.flexunit</groupId>
+			<groupId>com.adobe.flash.framework</groupId>
+			<artifactId>playerglobal</artifactId>
+			<version>16.0</version>
+			<type>swc</type>
+		</dependency>
+		<dependency>
+			<groupId>org.flexunit</groupId>
 			<artifactId>flexunit</artifactId>
-			<version>4.0-rc-1</version>
+			<version>${flexunit.version}</version>
+			<classifier>flex4</classifier>
 			<type>swc</type>
 			<scope>test</scope>
 		</dependency>
+		<!-- Third party libraries -->
 		<dependency>
 			<groupId>com.hurlant</groupId>
 			<artifactId>as3-crypto</artifactId>
@@ -94,12 +77,11 @@
 			<type>swc</type>
 		</dependency>
 	</dependencies>
-
 	<!-- Ideally this would go into your ~/.m2/settings.xml file -->
 	<repositories>
 		<repository>
-			<id>flex-mojos-repository</id>
-			<url>http://repository.sonatype.org/content/groups/flexgroup</url>
+			<id>flex-mojos-repository-releases</id>
+			<url>https://oss.sonatype.org/content/repositories/releases</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
@@ -107,11 +89,22 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
+		<repository>
+			<id>flex-mojos-repository-snapshots</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
 	</repositories>
+
 	<pluginRepositories>
 		<pluginRepository>
-			<id>flex-mojos-plugin-repository</id>
-			<url>http://repository.sonatype.org/content/groups/flexgroup</url>
+			<id>flex-mojos-plugin-repository-releases</id>
+			<url>https://oss.sonatype.org/content/repositories/releases</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
@@ -120,15 +113,14 @@
 			</snapshots>
 		</pluginRepository>
 		<pluginRepository>
-			<id>flexpmd.opensource.adobe</id>
+			<id>flex-mojos-plugin-repository-snapshots</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
 			<releases>
 				<enabled>false</enabled>
 			</releases>
 			<snapshots>
 				<enabled>true</enabled>
 			</snapshots>
-			<name>FlexPMD repository on opensource.adobe.com</name>
-			<url>http://opensource.adobe.com/svn/opensource/flexpmd/maven-repository/release/</url>
 		</pluginRepository>
 	</pluginRepositories>
 </project>

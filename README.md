@@ -1,6 +1,6 @@
-# An ActionScript Library implementing the OAuth 1.0 Protocol
+# An ActionScript Library for interacting with OAuth 1.0 web services.
 
-> **A note at the beginning:** This implementation is only a project to get a deeper understanding of how OAuth 1.0 actually works. It is not a production ready implementation. So use it at your own risk, but please keep in mind that you should by no means use the OAuth Authorization Process implemented in this library for real world application, since therefore you have to store your ```consumer key``` and ```consumer secret``` within your application and it could be reverse engineered and so abused. So it's better to outsource this process on the server to keep your ```comsumer key``` and ```consumer secret``` actually secret. 
+> **A note at the beginning:** The only purpose of this project was to get a deeper understanding of how OAuth 1.0 actually works and how a client could interact with OAuth 1.0 services. It is not a production ready implementation. So use only it at your own risk, but please keep in mind that you should by no means use the OAuth Authorization Process implemented in this library for real world application, because therefore you have to store your ```consumer key``` and ```consumer secret``` within your application and it could be reverse engineered and so abused. So it's better to outsource this process on the server to keep your ```comsumer key``` and ```consumer secret``` actually secret. 
 
 An ActionScript 3 library for making authenticated web service request based on the OAuth 1.0 protocol. This library is implemented according to the [OAuth 1.0 Specification](https://tools.ietf.org/html/rfc5849).
 

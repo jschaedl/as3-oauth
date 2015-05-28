@@ -12,7 +12,7 @@
 		<flexunit.version>4.1.0</flexunit.version>
 		<flexmojos.version>7.1.0-SNAPSHOT</flexmojos.version>
 	</properties>
-	<description>An ActionScript Library implementing the OAuth 1.0 Protocol.</description>
+	<description>An ActionScript Library implementing for interacting with OAuth 1.0 web services.</description>
 	<url>https://github.com/jschaedl/as3-oauth</url>
 	<build>
 		<sourceDirectory>src/main/actionscript</sourceDirectory>
